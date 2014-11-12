@@ -1,0 +1,54 @@
+NAME
+    App::GenBashCompleter - Backend for gen-bash-completer
+
+VERSION
+    This document describes version 0.01 of App::GenBashCompleter (from Perl
+    distribution App-GenBashCompleter), released on 2014-11-12.
+
+FUNCTIONS
+  gen_bash_completer(%args) -> [status, msg, result, meta]
+    Arguments ('*' denotes required arguments):
+
+    *   path* => *str*
+
+        Path to program/script to generate completion for.
+
+        You can specify "-" to mean stdin.
+
+    Return value:
+
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+    Will return bash completer script, or undef (buf)
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/App-GenBashCompleter>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/perlancar/perl-App-GenBashCompleter>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=App-GenBashCompleter>
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
+AUTHOR
+    perlancar <perlancar@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by perlancar@cpan.org.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
